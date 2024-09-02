@@ -126,7 +126,7 @@ cd tomcat
 
 find / -name context.xml
 
-Comment the lines inside the below both paths as show in screen shot.
+## Issue with opening tomcay URL so Comment the lines inside the below both paths as show in screen shot.
 
 vim /opt/tomcat/webapps/host-manager/META-INF/context.xml
 
@@ -149,13 +149,26 @@ vim tomcat-users.xml
 shift+G to go to end of the xml file
 
 Need to add three users in tomcat-users.xml file as below,
+
  <role rolename="manager-gui"/>
+
  <role rolename="manager-script"/>
+ 
  <role rolename="manager-jmx"/>
+
  <role rolename="manager-status"/>
+
  <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+
  <user username="deployer" password="deployer" roles="manager-script"/>
+ 
  <user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+Now login tomcat UI 
+
+## Add tomcat credentials to jenkins
+
+Login Jenkins --> Goto Manage Jenkins ---> Credentials ---> 
 
 
 ## 7. Install pluggins in jenkins
