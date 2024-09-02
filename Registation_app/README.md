@@ -10,20 +10,27 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
   
 sudo apt-get update
+
 sudo apt-get install jenkins
 
 ## 3. Install Java on Jenkins server
 sudo apt update
+
 sudo apt install fontconfig openjdk-17-jre
 
 java -version
+
 openjdk version "17.0.8" 2023-07-18
+
 OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
 OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
 
 ## 4. Once Jenkins and java installed Take Jenkins server IP and paste in browser
  http://IP Addrress:8080/
-After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - sudo cat /var/lib/jenkins/secrets/initialAdminPassword - Enter the Administrator password
+ 
+After you login to Jenkins, - Run the command to copy the Jenkins Admin Password - 
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword - Enter the Administrator password
 
  ![image](https://github.com/user-attachments/assets/eb2cbfd3-5019-480d-8f0c-13660b5be5be)
 
@@ -47,11 +54,17 @@ website = https://maven.apache.org/download.cgi  ----> Copy binay tar file link
 
 
 https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
 cd /opt
+
 wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
 tar -xzvf apache-maven-3.9.9-bin.tar.gz
+
 mv apache-maven-3.9.3 maven
+
 cd maven
+
 ./mvn -v
 
 ## 5. add maven and java to home path
@@ -88,6 +101,7 @@ Manage jenkins --> Pluggins -- Available Pluggins --> Install Maven integration 
 ## 7. Now Configure pluggins
 
 Login to jenkins and goto Manage Jenkins then Tools
+
 Manage jenkins --> Tools --> Add JDK and Maven
 ![image](https://github.com/user-attachments/assets/4c60af4d-ce09-4fc4-852c-e7a8e399702e)
 
