@@ -93,6 +93,35 @@ Manage jenkins --> Tools --> Add JDK and Maven
 
 ![image](https://github.com/user-attachments/assets/8a3ab51f-733b-457b-bed6-9cee70382573)
 
+## 8. Create New Job
+
+Go to Dashboard --> Add New --> Select Maven
+
+![image](https://github.com/user-attachments/assets/f663f4a6-f044-4a92-9e90-75f83a1a59a6)
+
+Provide description of job
+![image](https://github.com/user-attachments/assets/f119a441-b2a0-4a31-a42e-95d336fdf57d)
+
+Provide git repository URL 
+
+Note: Provide credentials of repo if repository is provite
+
+![image](https://github.com/user-attachments/assets/e2bfa3aa-d0e9-4478-a0ed-749c05f04d74)
+
+Provide branch name 
+
+![image](https://github.com/user-attachments/assets/246cc9dd-d41b-440c-a6c8-0aa1126ac0ee)
+
+Provide build options and goals
+
+![image](https://github.com/user-attachments/assets/ceca2ec9-8329-42a4-b65d-2791bf5863a5)
+
+Provide post build actions
+
+Select deploy war/ear to a container --> Add Tomcat credentioals (You can add credentials under credentioals manager section ) --> Add tomcat version ex: Tomcat9 --->   Add Tomcat URL ---> apply and save
+
+
+![image](https://github.com/user-attachments/assets/75838ec0-3167-413a-8657-5bbb190a1209)
 
 
 
@@ -103,5 +132,3 @@ Manage jenkins --> Tools --> Add JDK and Maven
 
 
 
-
-## 4
