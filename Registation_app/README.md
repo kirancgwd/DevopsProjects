@@ -94,7 +94,69 @@ PATH="$M2_HOME/bin:$PATH"
 
 export PATH
 
-## 6. Install pluggins in jenkins
+## 6. Setup Tomcat Server
+Install Java on Tomcat server
+
+sudo apt update
+
+sudo apt install fontconfig openjdk-17-jre
+
+java -version
+
+openjdk version "17.0.8" 2023-07-18
+
+OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
+OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
+
+Install Tomcat by copying URL from official website
+
+![image](https://github.com/user-attachments/assets/ae5d555b-f719-4944-929c-1aef23844bc0)
+
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz
+
+cd /opt
+
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz
+
+mv apache-tomcat-9.0.93 tomcat
+
+cd tomcat
+
+./startup.sh
+
+find / -name context.xml
+
+Comment the lines inside the below both paths as show in screen shot.
+
+vim /opt/tomcat/webapps/host-manager/META-INF/context.xml
+
+ vim /opt/tomcat/webapps/manager/META-INF/context.xml
+
+ ./shutdown.sh
+ 
+ ./startup.sh
+
+Add tomcat users paddword and roles 
+
+cd tomcat
+
+cd conf
+
+vim tomcat-users.xml
+
+shift+G to go to end of the xml file
+
+Need to add three users in tomcat-users.xml file as below,
+ <role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ <user username="deployer" password="deployer" roles="manager-script"/>
+ <user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+
+## 7. Install pluggins in jenkins
 
 Login to jenkins and goto Manage Jenkins then Pluggins
 
@@ -102,7 +164,7 @@ Manage jenkins --> Pluggins -- Available Pluggins --> Install Maven integration 
 
 ![image](https://github.com/user-attachments/assets/d6b9fd74-6e19-4a36-a3a6-661a80205561)
 
-## 7. Now Configure pluggins
+## 8. Now Configure pluggins
 
 Login to jenkins and goto Manage Jenkins then Tools
 
@@ -111,7 +173,7 @@ Manage jenkins --> Tools --> Add JDK and Maven
 
 ![image](https://github.com/user-attachments/assets/8a3ab51f-733b-457b-bed6-9cee70382573)
 
-## 8. Create New Job
+## 9. Create New Job
 
 Go to Dashboard --> Add New --> Select Maven
 
