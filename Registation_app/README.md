@@ -56,12 +56,15 @@ cd maven
 
 ## 5. add maven and java to home path
 cd ~
+
 ls -a
+
 .  ..  .bash_history  .bashrc  .lesshst  .profile  .ssh  .viminfo  .wget-hsts  snap
 
 copy below lines to .profile file
 
 vim .profile
+
 #java home path
 
 JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
