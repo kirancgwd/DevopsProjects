@@ -168,7 +168,10 @@ Now login tomcat UI
 
 ## Add tomcat credentials to jenkins
 
-Login Jenkins --> Goto Manage Jenkins ---> Credentials ---> 
+Login Jenkins --> Goto Manage Jenkins ---> Credentials ---> System ---> Click Global Credentials ---> Add Credentials as added above in tomcat-users.xml (admin, admin) 
+
+![image](https://github.com/user-attachments/assets/c2d1deab-6ff4-452c-84f1-eb6b1dc7addb)
+
 
 
 ## 7. Install pluggins in jenkins
