@@ -178,9 +178,11 @@ Login Jenkins --> Goto Manage Jenkins ---> Credentials ---> System ---> Click Gl
 
 Login to jenkins and goto Manage Jenkins then Pluggins
 
-Manage jenkins --> Pluggins -- Available Pluggins --> Install Maven integration pluggin
+Manage jenkins --> Pluggins -- Available Pluggins --> Install Maven integration pluggin and Deploy to container pluggin
 
 ![image](https://github.com/user-attachments/assets/d6b9fd74-6e19-4a36-a3a6-661a80205561)
+
+![image](https://github.com/user-attachments/assets/22faea8d-4430-49d0-aa4b-d140bb9bd6fa)
 
 ## 8. Now Configure pluggins
 
