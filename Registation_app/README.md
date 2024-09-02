@@ -51,7 +51,28 @@ cd /opt
 wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
 tar -xzvf apache-maven-3.9.9-bin.tar.gz
 mv apache-maven-3.9.3 maven
+cd maven
+./mvn -v
 
+## add maven and java to home path
+cd ~
+ls -a
+.  ..  .bash_history  .bashrc  .lesshst  .profile  .ssh  .viminfo  .wget-hsts  snap
+
+copy below lines to .profile file
+
+vim .profile
+#java home path
+
+JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export JAVA_HOME
+
+PATH=$PATH:$JAVA_HOME/bin
+export PATH
+
+M2_HOME='/opt/apache-maven-3.9.9'
+PATH="$M2_HOME/bin:$PATH"
+export PATH
 
 
 
