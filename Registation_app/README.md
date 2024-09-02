@@ -132,6 +132,8 @@ vim /opt/tomcat/webapps/host-manager/META-INF/context.xml
 
  vim /opt/tomcat/webapps/manager/META-INF/context.xml
 
+![image](https://github.com/user-attachments/assets/dd41f5f3-5ff1-4b02-b82a-f3da17be2a59)
+
  ./shutdown.sh
  
  ./startup.sh
