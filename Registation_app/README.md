@@ -147,7 +147,8 @@ shift+G to go to end of the xml file
 
 Need to add three users in tomcat-users.xml file as below,
 
- <role rolename="manager-gui"/>
+##
+<role rolename="manager-gui"/>
 
  <role rolename="manager-script"/>
  
@@ -160,6 +161,7 @@ Need to add three users in tomcat-users.xml file as below,
  <user username="deployer" password="deployer" roles="manager-script"/>
  
  <user username="tomcat" password="s3cret" roles="manager-gui"/>
+ ##
 
 Now login tomcat UI 
 
