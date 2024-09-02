@@ -1,5 +1,5 @@
 ## 1. Create 2 ubuntu servers for jenkins and Tomcat in AWS
-## Make Sure TCP ports are enabled 80, 8080, 22, 443 in security group.
+## Make Sure inbound TCP ports are enabled 80, 8080, 22, 443 in security group.
 
 ## 2. Intsall Jenkins on Jenkins server
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
@@ -37,6 +37,21 @@ Once pluggins installed create username and password
 
 Now you can start using jenkins
 ![image](https://github.com/user-attachments/assets/cb593876-c728-4f0a-8b5b-a40e84c406dd)
+
+===============Apache Maven Installation============================================================
+
+## 4. Go to maven official website to get the donwload link.
+
+website = https://maven.apache.org/download.cgi  ----> Copy binay tar file link
+![image](https://github.com/user-attachments/assets/26429bb5-b815-4630-87e7-ca1d7c1774f9)
+
+
+https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+cd /opt
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+tar -xzvf apache-maven-3.9.9-bin.tar.gz
+mv apache-maven-3.9.3 maven
+
 
 
 
