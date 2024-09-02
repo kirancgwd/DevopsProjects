@@ -54,7 +54,7 @@ mv apache-maven-3.9.3 maven
 cd maven
 ./mvn -v
 
-## add maven and java to home path
+## 5. add maven and java to home path
 cd ~
 ls -a
 .  ..  .bash_history  .bashrc  .lesshst  .profile  .ssh  .viminfo  .wget-hsts  snap
@@ -73,6 +73,26 @@ export PATH
 M2_HOME='/opt/apache-maven-3.9.9'
 PATH="$M2_HOME/bin:$PATH"
 export PATH
+
+## 6. Install pluggins in jenkins
+
+Login to jenkins and goto Manage Jenkins then Pluggins
+
+Manage jenkins --> Pluggins -- Available Pluggins --> Install Maven integration pluggin
+
+![image](https://github.com/user-attachments/assets/d6b9fd74-6e19-4a36-a3a6-661a80205561)
+
+## 7. Now Configure pluggins
+
+Login to jenkins and goto Manage Jenkins then Tools
+Manage jenkins --> Tools --> Add JDK and Maven
+![image](https://github.com/user-attachments/assets/4c60af4d-ce09-4fc4-852c-e7a8e399702e)
+
+![image](https://github.com/user-attachments/assets/8a3ab51f-733b-457b-bed6-9cee70382573)
+
+
+
+
 
 
 
