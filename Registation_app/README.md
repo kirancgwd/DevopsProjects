@@ -81,13 +81,17 @@ vim .profile
 #java home path
 
 JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 export JAVA_HOME
 
 PATH=$PATH:$JAVA_HOME/bin
+
 export PATH
 
 M2_HOME='/opt/apache-maven-3.9.9'
+
 PATH="$M2_HOME/bin:$PATH"
+
 export PATH
 
 ## 6. Install pluggins in jenkins
