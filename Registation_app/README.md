@@ -223,6 +223,10 @@ Select deploy war/ear to a container --> Add Tomcat credentioals (You can add cr
 
 ![image](https://github.com/user-attachments/assets/75838ec0-3167-413a-8657-5bbb190a1209)
 
+## Then Finally Build the Job
+
+![image](https://github.com/user-attachments/assets/bc1c9d92-0e06-4b17-b266-44fb22b514bf)
+
 
 
 
