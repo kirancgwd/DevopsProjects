@@ -58,9 +58,7 @@ wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bi
 
 tar -xzvf apache-maven-3.9.9-bin.tar.gz
 
-mv apache-maven-3.9.3 maven
-
-cd maven
+cd apache-maven-3.9.3
 
 ./mvn -v
 
@@ -146,13 +144,14 @@ vim tomcat-users.xml
 shift+G to go to end of the xml file
 
 Need to add three users in tomcat-users.xml file as below,
- <role rolename="manager-gui"/>
- <role rolename="manager-script"/>
- <role rolename="manager-jmx"/>
- <role rolename="manager-status"/>
- <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
- <user username="deployer" password="deployer" roles="manager-script"/>
- <user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+@ <role rolename="manager-gui"/>
+ @<role rolename="manager-script"/>
+ @<role rolename="manager-jmx"/>
+ @<role rolename="manager-status"/>
+ @<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ @<user username="deployer" password="deployer" roles="manager-script"/>
+ @<user username="tomcat" password="s3cret" roles="manager-gui"/>
 
 Poll SCM schedule to verify repository at every min is "* * * * *"
  
